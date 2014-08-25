@@ -1,6 +1,18 @@
 "use strict";
-angular.module('Hello World',[])
-  .controller('MainCtrl', function ($scope) {
-    $scope.world = 'Front End Masters';
-  });
+var myApp = angular.module('myApp',[]);
+myApp.factory('Data', function () {
+  return { message: "I'm data from a service" };
+});
+
+function FirstCtrl($scope, Data) {
+  $scope.data = Data;
+};
+
+function SecondCtrl($scope, Data) {
+  $scope.data = Data;
+
+  $scope.reversedMessage = function () {
+    return $scope.data.message.split("").reverse().join();
+  };
+};
 
