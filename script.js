@@ -5,14 +5,10 @@ myApp.factory('Data', function () {
 });
 
 function FirstCtrl($scope, Data) {
-  $scope.data = Data;
+  //$scope.data = Data;
 };
 
 function SecondCtrl($scope, Data) {
-  $scope.data = Data;
-
-  $scope.reversedMessage = function (message) {
-    return message.split("").reverse().join("");
-  };
+  //$scope.data = Data;
 };
 
