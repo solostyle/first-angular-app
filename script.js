@@ -1,14 +1,8 @@
-"use strict";
-var myApp = angular.module('myApp',[]);
-myApp.factory('Data', function () {
-  return { message: "I'm data from a service" };
-});
-
-function FirstCtrl($scope, Data) {
+function FirstCtrl($scope) {
   //$scope.data = Data;
 };
 
-function SecondCtrl($scope, Data) {
+function SecondCtrl($scope) {
   //$scope.data = Data;
 };
 
