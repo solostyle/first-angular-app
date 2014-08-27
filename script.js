@@ -1,8 +1,7 @@
-var app = angular.module("superhero", []);
+var app = angular.module("egghead", []);
 
-app.directive("superman", function () {
-  return {
-    restrict: "E",
-    template: "<div>Here I am to save the day</div>"
+app.directive("myFirstDirective", function () {
+  return function () {
+    console.log("Hello");
   }
 });
