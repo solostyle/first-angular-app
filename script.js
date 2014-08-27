@@ -1,13 +1,17 @@
-var app = angular.module("egghead", []);
+var app = angular.module("behaviorApp", []);
 
-app.controller("AppCtrl", function () {
-  var app = this;
-
-  app.message = "Hello";
+app.directive("enter", function () {
+  return function (scope, element) {
+    element.bind("mouseenter", function () {
+      console.log("I'm inside of you!");
+    });
+  }
 });
 
-app.directive("myFirstDirective", function () {
-  return function (scope, element, attrs) {
-    element.text(scope.app.message + " " + attrs.message);
+app.directive("leave", function () {
+  return function (scope, element) {
+    element.bind("mouseleave", function () {
+      console.log("I'm leaving on a jet plane!");
+    });
   }
 });
