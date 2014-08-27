@@ -1,7 +1,13 @@
 var app = angular.module("egghead", []);
 
+app.controller("AppCtrl", function () {
+  var app = this;
+
+  app.message = "Hello";
+});
+
 app.directive("myFirstDirective", function () {
-  return function () {
-    console.log("Hello");
+  return function (scope) {
+    console.log(scope.app.message);
   }
 });
