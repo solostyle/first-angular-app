@@ -7,7 +7,7 @@ app.controller("AppCtrl", function () {
 });
 
 app.directive("myFirstDirective", function () {
-  return function (scope) {
-    console.log(scope.app.message);
+  return function (scope, element) {
+    element.text(scope.app.message);
   }
 });
