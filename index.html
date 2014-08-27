@@ -1,24 +1,17 @@
 <!doctype html>
 <html>
-  <head>
-    <title>First Angular App</title>
-    <meta charset="utf-8">
-  </head>
+<head>
+<title>First Angular App</title>
+<meta charset="utf-8">
+</head>
+<body>
 
-  <body>
-    <div ng-app="myApp">
-      <div ng-controller="AvengersCtrl">
-	<input type="text" ng-model="search.character" />
-	<table>
-	  <tr ng-repeat="actor in avengers.cast | orderBy:'name' | filter:search">
-	    <td>{{actor.name | lowercase}}</td>
-	    <td>{{actor.character | uppercase}}</td>
-	  </tr>
-	</table>
-      </div>
-    </div>
+  <div ng-app="superhero">
+    <superman></superman>
+  </div>
+ 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
 </html>
