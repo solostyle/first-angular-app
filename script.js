@@ -1,7 +1,7 @@
 var app = angular.module("choreApp", []);
 app.controller("choreCtrl", function ($scope) {
-  $scope.logChore = function (chore) {
-    alert(chore + " is done!");
+  $scope.logChore = function (loggedChore) {
+    alert(loggedChore + " is done!");
   };
 });
 
@@ -11,9 +11,9 @@ app.directive("kid", function () {
     scope: {
       done: "&"
     },
-    template: '<input type="text" ng-model="chore">' +
-      '{{chore}}' +
-      '<div class="button" ng-click="done({chore:chore})">I\'m done!</div>'
+    template: '<input type="text" ng-model="inputChore">' +
+      '{{inputChore}}' +
+      '<div class="button" ng-click="done({loggedChore:inputChore})">I\'m done!</div>'
   }
 });
 
