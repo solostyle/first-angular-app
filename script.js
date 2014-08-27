@@ -11,7 +11,7 @@ app.directive("enter", function () {
 app.directive("leave", function () {
   return function (scope, element, attrs) {
     element.bind("mouseleave", function () {
-      element.removeClass(attrs.leave);
+      element.removeClass(attrs.enter);
     });
   }
 });
