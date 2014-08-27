@@ -1,19 +1,15 @@
-var app = angular.module("choreApp", []);
-app.controller("choreCtrl", function ($scope) {
-  $scope.logChore = function (loggedChore) {
-    alert(loggedChore + " is done!");
+var app = angular.module("phoneApp", []);
+app.controller("AppCtrl", function ($scope) {
+  $scope.callHome = function () {
+    alert("Called home!");
   };
 });
 
-app.directive("kid", function () {
+app.directive("phone", function () {
   return {
-    restrict: "E",
     scope: {
-      done: "&"
+      dial: "&"
     },
-    template: '<input type="text" ng-model="inputChore">' +
-      '{{inputChore}}' +
-      '<div class="button" ng-click="done({loggedChore:inputChore})">I\'m done!</div>'
+    template: '<div class="button" ng-click="dial()">Call home</div>'
   }
 });
-
