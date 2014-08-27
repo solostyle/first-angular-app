@@ -1,19 +1,9 @@
-var app = angular.module("superhero", []);
+var app = angular.module("choreApp", []);
 
-app.directive("superman", function () {
+app.directive("kid", function () {
   return {
-    restrict: "A",
-    link: function () {
-      alert("I'm working stronger");
-    }
+    restrict: "E",
+    template: '<input type="text" ng-model="chore">{{chore}}'
   }
 });
 
-app.directive("flash", function () {
-  return {
-    restrict: "A",
-    link: function () {
-      alert("I'm working faster");
-    }
-  }
-});
