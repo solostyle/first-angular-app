@@ -13,7 +13,7 @@ app.directive("kid", function () {
     },
     template: '<input type="text" ng-model="chore">' +
       '{{chore}}' +
-      '<div class="button" ng-click="done()">I\'m done!</div>'
+      '<div class="button" ng-click="done({chore:chore})">I\'m done!</div>'
   }
 });
 
