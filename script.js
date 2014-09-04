@@ -8,6 +8,6 @@ app.directive("drink", function () {
     scope: {
       flavor: "="
     },
-    template: '<div>{{flavor}}</div>',
+    template: '<input type="text" ng-model="flavor">',
   }
 });
