@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>First Angular App</title>
+<head lang="en">
   <meta charset="utf-8">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css">
+  <title>Egghead Videos</title>
+  <link rel="stylesheet" href="vendor/foundation/foundation.min.css">
 </head>
 <body>
-<div ng-app="drinkApp">
+
+<div ng-app="phoneApp">
   <div ng-controller="AppCtrl">
-    Controller
-    <input type="text" ng-model="ctrlFlavor">
-    Directive
-    <div drink flavor="ctrlFlavor"></div>
+    <phone number="555-1234" network="network" make-call="leaveVoicemail(number, message)"></phone>
+    <phone number="867-5309" network="network" make-call="leaveVoicemail(number, message)"></phone>
+    <phone number="911" network="network" make-call="leaveVoicemail(number, message)"></phone>
   </div>
 </div>
- 
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+<script type="text/javascript" src="app/js/main.js"></script>
 </body>
 </html>
